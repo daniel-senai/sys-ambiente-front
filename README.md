@@ -1,4 +1,5 @@
-# SysSala
+# Sistema de Gestão de Ambiente Educacional e Autenticação por RFID
+O SYS-Ambiente é um sistema de gestão e controle de acessos à salas de aula por RFID. O sistema é composto por uma aplicação embarcada e outra aplicação web que se comunicam mediante protocolo MQTT e WebSocket. A aplicação embarcada foi implementada em C++ e a aplicação Web em Java utilizando o Framework Spring Boot.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
 
