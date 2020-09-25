@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './navegation/menu/menu.component';
 import { FooterComponent } from './navegation/footer/footer.component';
+import { HomeComponent } from './navegation/home/home.component';
 
 const appRoutes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -15,6 +16,7 @@ const appRoutes: Routes = [
     AppComponent,
     MenuComponent,
     FooterComponent,
+    HomeComponent,
  
   ],
   imports: [
