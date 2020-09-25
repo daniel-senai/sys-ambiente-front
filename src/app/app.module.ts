@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './navegation/menu/menu.component';
 import { FooterComponent } from './navegation/footer/footer.component';
 import { HomeComponent } from './navegation/home/home.component';
+import { UserComponent } from './perfil/user/user.component';
+import { UpdatepasswordComponent } from './perfil/updatepassword/updatepassword.component';
 
 const appRoutes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -17,6 +19,8 @@ const appRoutes: Routes = [
     MenuComponent,
     FooterComponent,
     HomeComponent,
+    UserComponent,
+    UpdatepasswordComponent,
  
   ],
   imports: [
