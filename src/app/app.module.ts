@@ -5,18 +5,15 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './navegation/menu/menu.component';
 import { FooterComponent } from './navegation/footer/footer.component';
 import { HomeComponent } from './navegation/home/home.component';
-<<<<<<< HEAD
 import { UserComponent } from './perfil/user/user.component';
 import { UpdatepasswordComponent } from './perfil/updatepassword/updatepassword.component';
 import { SobreComponent } from './instituicao/sobre/sobre.component';
 import { ContatoComponent } from './instituicao/contato/contato.component';
-=======
 import { AmbientesComponent } from './navegation/ambientes/ambientes.component';
 import { AmbienteComponent } from './navegation/ambiente/ambiente.component';
->>>>>>> navegation
 
 const appRoutes: Routes = [
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
 
 ];
 
@@ -26,16 +23,12 @@ const appRoutes: Routes = [
     MenuComponent,
     FooterComponent,
     HomeComponent,
-<<<<<<< HEAD
     UserComponent,
     UpdatepasswordComponent,
     SobreComponent,
     ContatoComponent,
-=======
     AmbientesComponent,
     AmbienteComponent,
->>>>>>> navegation
- 
   ],
   imports: [
     BrowserModule,
