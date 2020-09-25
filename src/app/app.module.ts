@@ -7,6 +7,8 @@ import { FooterComponent } from './navegation/footer/footer.component';
 import { HomeComponent } from './navegation/home/home.component';
 import { UserComponent } from './perfil/user/user.component';
 import { UpdatepasswordComponent } from './perfil/updatepassword/updatepassword.component';
+import { SobreComponent } from './instituicao/sobre/sobre.component';
+import { ContatoComponent } from './instituicao/contato/contato.component';
 
 const appRoutes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -21,6 +23,8 @@ const appRoutes: Routes = [
     HomeComponent,
     UserComponent,
     UpdatepasswordComponent,
+    SobreComponent,
+    ContatoComponent,
  
   ],
   imports: [
