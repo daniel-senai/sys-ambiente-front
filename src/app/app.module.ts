@@ -11,6 +11,7 @@ import { SobreComponent } from './instituicao/sobre/sobre.component';
 import { ContatoComponent } from './instituicao/contato/contato.component';
 import { AmbientesComponent } from './navegation/ambientes/ambientes.component';
 import { AmbienteComponent } from './navegation/ambiente/ambiente.component';
+import { CreateUserComponent } from './perfil/create-user/create-user.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -29,6 +30,7 @@ const appRoutes: Routes = [
     ContatoComponent,
     AmbientesComponent,
     AmbienteComponent,
+    CreateUserComponent,
   ],
   imports: [
     BrowserModule,
