@@ -1,1 +1,94 @@
-<app-menu></app-menu>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card text-left">
+                <img class="card-img-top">
+                <div class="card-header">
+                    <h2 style="font-size: 50px;">Ambiente</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="padding-top: 40px;">
+        <div class="col-12 col-md-6">
+            <div class="card">
+                <img src="../../../assets/img/ico_camera.png" class="card-img-top" alt="Camera da Sala">
+                <div class="card-body">
+                    <input type="number" class="form-control" id="controle-ip-camera" placeholder="IP-Câmera">
+                    <hr>
+                    <button id="AtivarCamera" type="button" class="btn btn-primary btn-sm btn-block">Ativar Camera</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-12  col-md-6">
+            <label class="regional">Regional</label>
+            <select class="custom-select custom-select-sm">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            <label class="regional">Unidade</label>
+            <select class="custom-select custom-select-sm">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            <label class="regional">Bloco</label>
+            <select class="custom-select custom-select-sm">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            <div class="form-group">
+                <label for="formGroupExampleInput">Sala</label>
+                <input type="number" class="form-control" id="formGroupExampleInput" placeholder="Ex: 100">
+            </div>
+            <label class="regional">Tipo de Ambiente</label>
+            <select class="custom-select custom-select-sm">
+                <option selected>Defina o Tipo de Ambiente</option>
+                <option value="1">Corporativo</option>
+                <option value="2">Casual</option>
+              </select>
+            <div class="form-group">
+                <label for="formGroupExampleInput">Capacidade</label>
+                <input type="number" class="form-control" id="formGroupExampleInput" placeholder="Ex: 40">
+            </div>
+            <hr>
+            <button type="button" class="btn btn-primary btn-sm btn-block">Embarcado</button>
+            <button type="button" class="btn btn-secondary btn-sm btn-block">Usuario com Acesso</button>
+            <button type="button" class="btn btn-secondary btn-sm btn-block">Relatorio de Acessos</button>
+            <hr>
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="deslLamFrente">
+                <label class="custom-control-label" for="deslLamFrente">Ligar Lampadas-Frente</label>
+            </div>
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="deslLamFundo">
+                <label class="custom-control-label" for="deslLamFundo">Ligar Lampadas-Fundo</label>
+            </div>
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="deslArCon">
+                <label class="custom-control-label" for="deslArCon">Ligar Ar Condicionado</label>
+            </div>
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="desligarTudo">
+                <label class="custom-control-label" for="desligarTudo">Desligar Tudo</label>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-12 col-md-4">
+            <button type="button" class="btn btn-success btn-sm btn-block">Salvar</button>
+        </div>
+        <div class="col-12 col-md-4">
+            <button type="button" class="btn btn-danger btn-sm btn-block">Excluir</button>
+        </div>
+        <div class="col-12 col-md-4">
+            <button type="button" class="btn btn-warning btn-sm btn-block">Cancelar</button>
+        </div>
+    </div>
+</div>

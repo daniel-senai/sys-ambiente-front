@@ -11,5 +11,4 @@ export class AmbienteComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
