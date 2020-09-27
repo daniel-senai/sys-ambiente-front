@@ -1,11 +1,25 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <a class="navbar-brand">
-            <h2 style="color: white;">Sys Ambientes</h2>
-        </a>
+    <a class="navbar-brand" href="/" style="color:  #ffd700; font-size: 35px;">Sys Ambientes</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="color: white; font-size: 15px; position: -ms-page;">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a style="color: white;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Gestão dos Ambientes
+          </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Ambientes</a>
+                    <a class="dropdown-item" href="#">Usuários</a>
+                    <a class="dropdown-item" href="#">Embarcados</a>
+                    <a class="dropdown-item" href="#">Acessos</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Contato</a>
+                    <a class="dropdown-item" href="#">Sobre</a>
+                </div>
+            </li>
+        </ul>
     </div>
 </nav>
-<br>
-
-<app-create-user></app-create-user>
-<app-footer></app-footer>
