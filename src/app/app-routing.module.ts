@@ -11,30 +11,33 @@ import { CreateUserComponent } from './perfil/create-user/create-user.component'
 import { UserComponent } from './perfil/user/user.component';
 
 const appRoutes: Routes = [
-    {
-      path: '', component: HomeComponent, children: [
-        { path: '', redirectTo: 'home', pathMatch: 'full' },
-        { path: 'home', component: HomeComponent },
-        { path: 'ambientes', component: AmbientesComponent },
-        { path: 'ambiente', component: AmbienteComponent },
-        { path: 'users', component: UserComponent },
-        { path: 'create-user', component: CreateUserComponent }
-      ],
-      canActivate:[AuthGuard]
-    },
-    {
-      path:'', component: AuthenticatorComponent, children:[
-        {path:'', redirectTo: 'login',pathMatch: 'full'},
-        {path:'login', component: LoginComponent},
-        {path:'create-login', component: CreateLoginComponent}
-      ]
-    }
-  
-  ];
+  {
+    path: '',
+    component: HomeComponent,
+    children: [
+      { path: 'home', component: HomeComponent },
+      { path: 'ambientes', component: AmbientesComponent },
+      { path: 'ambiente', component: AmbienteComponent },
+      { path: 'users', component: UserComponent },
+      { path: 'create-user', component: CreateUserComponent }
+    ],
+    canActivate: [AuthGuard]
+  },
+  {
+    path: '',
+    component: AuthenticatorComponent,
+    children: [
+      { path: '', redirectTo: 'login', pathMatch: 'full' },
+      { path: 'login', component: LoginComponent },
+      { path: 'create-login', component: CreateLoginComponent },
+    ]
+  }
+
+];
 
 @NgModule({
-    imports: [RouterModule.forRoot(appRoutes)],
-    exports: [RouterModule]
+  imports: [RouterModule.forRoot(appRoutes)],
+  exports: [RouterModule]
 })
 
 export class AppRoutingModule { }
