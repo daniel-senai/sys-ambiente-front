@@ -12,15 +12,14 @@ import { ContatoComponent } from './instituicao/contato/contato.component';
 import { AmbientesComponent } from './navegation/ambientes/ambientes.component';
 import { AmbienteComponent } from './navegation/ambiente/ambiente.component';
 import { CreateUserComponent } from './perfil/create-user/create-user.component';
+import { LoginComponent } from './authentication/login/login.component';
+import { CreateLoginComponent } from './authentication/create-login/create-login.component';
+import { AuthenticatorComponent } from './authentication/authenticator/authenticator.component';
+import { AuthGuard } from './authentication/shared/auth.guard';
+import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 
-const appRoutes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component:  HomeComponent},
-  { path: 'ambientes', component:  AmbientesComponent},
-  { path: 'ambiente', component: AmbienteComponent},
-  { path: 'users', component:  UserComponent},
-  { path: 'create-user', component:  CreateUserComponent}
-];
+
 
 @NgModule({
   declarations: [
@@ -35,10 +34,15 @@ const appRoutes: Routes = [
     AmbientesComponent,
     AmbienteComponent,
     CreateUserComponent,
+    LoginComponent,
+    CreateLoginComponent,
+    AuthenticatorComponent,
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    FormsModule,
+    AppRoutingModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
