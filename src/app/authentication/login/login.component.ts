@@ -32,5 +32,4 @@ export class LoginComponent implements OnInit {
   newPassword(){
     alert("Foi enviado o link de redefinição para o e-mail cadastrado.");
   }
-
 }
