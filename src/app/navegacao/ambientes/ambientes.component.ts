@@ -21,7 +21,7 @@ export class AmbientesComponent implements OnInit {
     this.ambienteService.getListaAmbientes()
       .subscribe((ambientes: Ambiente[]) => {
         this.ambientes = ambientes;
-      }, () => { this.errorMsgComponent.setError('Erro ao buscar lista de Ambientes'); });
+      }, () => { console.log("Erro fatal"); });
   }
   deleteAmbiente(id: number) {
     this.ambienteService.deleteAmbiente(id)

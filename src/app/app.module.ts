@@ -21,6 +21,8 @@ import {GMapModule} from 'primeng/gmap';
 import { UsuariosComponent } from './perfil/usuarios/usuarios.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ErrorMsgComponent } from './share/error-msg/error-msg.component';
+import {MultiSelectModule} from 'primeng/multiselect';
+
 
 
 @NgModule({
@@ -46,7 +48,8 @@ import { ErrorMsgComponent } from './share/error-msg/error-msg.component';
     TableModule,
     CardModule,
     GMapModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MultiSelectModule
     
   ],
   providers: [],
