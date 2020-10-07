@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -12,6 +13,14 @@ import { SidebarModule } from 'primeng/sidebar';
 import { InputTextModule } from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
 import {MenubarModule} from 'primeng/menubar';
+import {TableModule} from 'primeng/table';
+import { AmbienteComponent } from './navegacao/ambiente/ambiente.component';
+import { AmbientesComponent } from './navegacao/ambientes/ambientes.component';
+import {CardModule} from 'primeng/card';
+import {GMapModule} from 'primeng/gmap';
+import { UsuariosComponent } from './perfil/usuarios/usuarios.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ErrorMsgComponent } from './share/error-msg/error-msg.component';
 
 
 @NgModule({
@@ -21,6 +30,11 @@ import {MenubarModule} from 'primeng/menubar';
     FooterComponent,
     HomeComponent,
     UsuarioComponent,
+    AmbienteComponent,
+    AmbientesComponent,
+    UsuariosComponent,
+    ErrorMsgComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -28,7 +42,11 @@ import {MenubarModule} from 'primeng/menubar';
     SidebarModule,
     ButtonModule,
     MenubarModule,
-    InputTextModule
+    InputTextModule,
+    TableModule,
+    CardModule,
+    GMapModule,
+    AppRoutingModule
     
   ],
   providers: [],

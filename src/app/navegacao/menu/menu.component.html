@@ -1,5 +1,7 @@
+<p-card>
+    <p-button type="button" (click)="screenVisible = true" icon="pi pi-bars"></p-button>
+</p-card>
 <p-sidebar [(visible)]="screenVisible" [baseZIndex]="10000">
     <h1 style="font-weight:normal">Sys Ambientes</h1>
-    <p-button type="button" (click)="screenVisible = false" label="Notificações" styleClass="p-button-success"></p-button>
+    <p-button type="button" (click)="screenVisible = false" label="Notificações" routerLink="/usuarios" styleClass="p-button-success"></p-button>
 </p-sidebar>
-<p-button type="button" (click)="screenVisible = true" icon="pi pi-bars"></p-button>
