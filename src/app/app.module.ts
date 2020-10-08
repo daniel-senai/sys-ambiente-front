@@ -1,3 +1,4 @@
+import { AmbienteService } from './navegacao/service/ambiente.service';
 import { HttpClient } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -49,7 +50,7 @@ import {MultiSelectModule} from 'primeng/multiselect';
     CardModule,
     GMapModule,
     AppRoutingModule,
-    MultiSelectModule
+    MultiSelectModule,   
     
   ],
   providers: [],

@@ -7,9 +7,10 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-    { path: 'ambientes', component: AmbientesComponent  },
-    { path: 'ambiente', component: AmbienteComponent  },
-    { path: 'usuarios', component: UsuariosComponent  }
+  { path: '', component: HomeComponent },
+  { path: 'ambientes', component: AmbientesComponent },
+  { path: 'ambiente', component: AmbienteComponent },
+  { path: 'usuarios', component: UsuariosComponent }
 ];
 
 

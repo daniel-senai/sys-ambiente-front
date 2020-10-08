@@ -1,3 +1,4 @@
+import { browser } from 'protractor';
 import { ErrorMsgComponent } from './../../share/error-msg/error-msg.component';
 import { AmbienteService } from './../service/ambiente.service';
 import { Ambiente } from './../interfaces/ambiente';
@@ -9,10 +10,11 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./ambientes.component.css']
 })
 export class AmbientesComponent implements OnInit {
+  public titleAmbiente: string = "Gestão dos Ambientes";
   public ambientes: Ambiente[];
-
+  public ambienteService: AmbienteService;
   @ViewChild(ErrorMsgComponent) errorMsgComponent: ErrorMsgComponent;
-  constructor(private ambienteService: AmbienteService) { }
+  constructor() { }
 
   ngOnInit(): void {
     this.getListaAmbientes();
@@ -21,7 +23,7 @@ export class AmbientesComponent implements OnInit {
     this.ambienteService.getListaAmbientes()
       .subscribe((ambientes: Ambiente[]) => {
         this.ambientes = ambientes;
-      }, () => { console.log("Erro fatal"); });
+      }, () => { this.errorMsgComponent.setError('Erro ao buscar lista de Ambientes'); });
   }
   deleteAmbiente(id: number) {
     this.ambienteService.deleteAmbiente(id)
