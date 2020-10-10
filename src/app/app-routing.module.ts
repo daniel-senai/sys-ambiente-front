@@ -1,3 +1,4 @@
+import { UsuarioComponent } from './perfil/usuario/usuario.component';
 import { UsuariosComponent } from './perfil/usuarios/usuarios.component';
 import { AmbientesComponent } from './navegacao/ambientes/ambientes.component';
 import { AmbienteComponent } from './navegacao/ambiente/ambiente.component';
@@ -10,7 +11,8 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'ambientes', component: AmbientesComponent },
   { path: 'ambiente', component: AmbienteComponent },
-  { path: 'usuarios', component: UsuariosComponent }
+  { path: 'usuarios', component: UsuariosComponent },
+  { path: 'usuario', component: UsuarioComponent }
 ];
 
 

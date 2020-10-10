@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { browser } from 'protractor';
 import { ErrorMsgComponent } from './../../share/error-msg/error-msg.component';
 import { AmbienteService } from './../service/ambiente.service';
@@ -12,23 +13,16 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 export class AmbientesComponent implements OnInit {
   public titleAmbiente: string = "Gestão dos Ambientes";
   public ambientes: Ambiente[];
-  public ambienteService: AmbienteService;
   @ViewChild(ErrorMsgComponent) errorMsgComponent: ErrorMsgComponent;
-  constructor() { }
+  constructor(private ambienteService: AmbienteService) { }
 
   ngOnInit(): void {
-    this.getListaAmbientes();
+    this.ambienteService.getListaAmbientes().subscribe((amb: Ambiente[])=>{this.ambientes = amb})
   }
-  getListaAmbientes() {
-    this.ambienteService.getListaAmbientes()
-      .subscribe((ambientes: Ambiente[]) => {
-        this.ambientes = ambientes;
-      }, () => { this.errorMsgComponent.setError('Erro ao buscar lista de Ambientes'); });
-  }
-  deleteAmbiente(id: number) {
+   deleteAmbiente(id: number) {
     this.ambienteService.deleteAmbiente(id)
       .subscribe(() => {
-        this.getListaAmbientes();
+        this.ambienteService.getListaAmbientes();
       }, () => { this.errorMsgComponent.setError('Falha ao Deletar Ambiente'); });
   }
   existAmbientes(): boolean {

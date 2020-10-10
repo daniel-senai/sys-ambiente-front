@@ -1,4 +1,39 @@
-<div *ngFor="let ambiente of ambientes">
-    <h3>{{ambiente.sala}}</h3>
-    <h1>{{titleAmbiente}}</h1>
-</div>
+<p-table [value]="ambientes" [lazy]="true" [paginator]="true" [rows]="10" styleClass="p-datatable-responsive-demo">
+    <ng-template pTemplate="caption" let-columns>
+        <div class="p-d-flex p-ai-center p-jc-between">
+            ambientes
+            <p-button icon="pi pi-refresh"></p-button>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Tipo de Ambiente</th>
+            <th>Numero</th>
+            <th>Bloco</th>
+            <th>Area</th>
+            <th>Unidade Institucional</th>
+            <th>Capacidade</th>
+            <th>Total de Pessoas</th>
+            <th>Total de Computadores</th>
+            <th>IpCamera</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-ambiente>
+        <tr>
+            <td>{{ambiente.tipoAmbiente}}</td>
+            <td>{{ambiente.numero}}</td>
+            <td>{{ambiente.bloco}}</td>
+            <td>{{ambiente.area}}</td>
+            <td>{{ambiente.unidInstitucional}}</td>
+            <td>{{ambiente.capacidade}}</td>
+            <td>{{ambiente.totalPessoa}}</td>
+            <td>{{ambiente.totalComputador}}</td>
+            <td>{{ambiente.ipCamera}}</td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+        <div class="p-d-flex p-ai-center p-jc-between">
+            Ao Todo Temos {{ambientes ? ambientes.length : 0 }} ambientes Cadastrados.
+        </div>
+    </ng-template>
+</p-table>
