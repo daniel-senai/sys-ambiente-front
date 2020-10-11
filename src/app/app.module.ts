@@ -22,6 +22,8 @@ import { UsuariosComponent } from './perfil/usuarios/usuarios.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ErrorMsgComponent } from './share/error-msg/error-msg.component';
 import {MultiSelectModule} from 'primeng/multiselect';
+import { NotificacoesComponent } from './navegacao/notificacoes/notificacoes.component';
+import { AcessosComponent } from './navegacao/acessos/acessos.component';
 
 
 
@@ -37,6 +39,8 @@ import {MultiSelectModule} from 'primeng/multiselect';
     AmbientesComponent,
     UsuariosComponent,
     ErrorMsgComponent,
+    NotificacoesComponent,
+    AcessosComponent,
     
   ],
   imports: [
