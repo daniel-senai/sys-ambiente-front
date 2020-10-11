@@ -1,4 +1,5 @@
-import { HttpClient } from '@angular/common/http';
+import { AmbienteService } from './navegacao/service/ambiente.service';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -21,6 +22,8 @@ import {GMapModule} from 'primeng/gmap';
 import { UsuariosComponent } from './perfil/usuarios/usuarios.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ErrorMsgComponent } from './share/error-msg/error-msg.component';
+import {MultiSelectModule} from 'primeng/multiselect';
+
 
 
 @NgModule({
@@ -46,7 +49,9 @@ import { ErrorMsgComponent } from './share/error-msg/error-msg.component';
     TableModule,
     CardModule,
     GMapModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MultiSelectModule,  
+    HttpClientModule
     
   ],
   providers: [],

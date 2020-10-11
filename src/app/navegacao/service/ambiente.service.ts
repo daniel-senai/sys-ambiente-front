@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 export class AmbienteService {
 
   constructor(private httpCliente: HttpClient) { }
+
   getListaAmbientes(): Observable<Ambiente[]> {
     const url = `${environment.urlApi}/ambientes`;
     return this.httpCliente.get<Ambiente[]>(url);
