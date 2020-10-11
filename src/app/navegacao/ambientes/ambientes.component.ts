@@ -13,6 +13,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 export class AmbientesComponent implements OnInit {
   public titleAmbiente: string = "Gestão dos Ambientes";
   public ambientes: Ambiente[];
+  ambienteSetado: Ambiente;
+  
   @ViewChild(ErrorMsgComponent) errorMsgComponent: ErrorMsgComponent;
   constructor(private ambienteService: AmbienteService) { }
 
@@ -28,4 +30,5 @@ export class AmbientesComponent implements OnInit {
   existAmbientes(): boolean {
     return this.ambientes && this.ambientes.length > 0;
   }
+
 }
