@@ -27,8 +27,4 @@ export class AmbientesComponent implements OnInit {
         this.ambienteService.getListaAmbientes();
       }, () => { this.errorMsgComponent.setError('Falha ao Deletar Ambiente'); });
   }
-  existAmbientes(): boolean {
-    return this.ambientes && this.ambientes.length > 0;
-  }
-
 }
