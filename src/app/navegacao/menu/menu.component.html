@@ -3,6 +3,8 @@
 </p-card>
 <p-sidebar [(visible)]="screenVisible" [baseZIndex]="10000">
     <h1 style="font-weight:normal">Sys Ambientes</h1>
-    <p-button type="button" (click)="screenVisible = false" label="Ambientes" routerLink="/ambientes" styleClass="p-button-primary"></p-button>
-    <p-button type="button" (click)="screenVisible = false" label="Usuarios" routerLink="/usuarios" styleClass="p-button-success"></p-button>
+    <p-button type="button" (click)="screenVisible = false" icon="pi pi-home" label="Ambientes" routerLink="/ambientes" styleClass="p-button-primary"></p-button>
+    <p-button type="button" (click)="screenVisible = false" icon="pi pi-bell" label="Notificações" routerLink="/notificacoes" styleClass="p-button-warning"></p-button>
+    <hr>
+    <p-button type="button" (click)="screenVisible = false" icon="pi pi-user" label=" Usuarios" routerLink="/usuarios" styleClass="p-button-success"></p-button>
 </p-sidebar>

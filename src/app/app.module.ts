@@ -24,7 +24,8 @@ import { ErrorMsgComponent } from './share/error-msg/error-msg.component';
 import {MultiSelectModule} from 'primeng/multiselect';
 import { NotificacoesComponent } from './navegacao/notificacoes/notificacoes.component';
 import { AcessosComponent } from './navegacao/acessos/acessos.component';
-
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+const config: SocketIoConfig = { url: 'http://localhost:3000/notificacoes', options: {} };
 
 
 
@@ -55,7 +56,8 @@ import { AcessosComponent } from './navegacao/acessos/acessos.component';
     GMapModule,
     AppRoutingModule,
     MultiSelectModule,  
-    HttpClientModule
+    HttpClientModule,
+    SocketIoModule.forRoot(config)
     
   ],
   providers: [],
