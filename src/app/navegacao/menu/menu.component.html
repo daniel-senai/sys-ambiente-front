@@ -2,9 +2,10 @@
     <p-button type="button" (click)="screenVisible = true" icon="pi pi-bars"></p-button>
 </p-card>
 <p-sidebar [(visible)]="screenVisible" [baseZIndex]="10000">
-    <h1 style="font-weight:normal">Sys Ambientes</h1>
-    <p-button type="button" (click)="screenVisible = false" icon="pi pi-home" label="Ambientes" routerLink="/ambientes" styleClass="p-button-primary"></p-button>
-    <p-button type="button" (click)="screenVisible = false" icon="pi pi-bell" label="Notificações" routerLink="/notificacoes" styleClass="p-button-warning"></p-button>
-    <hr>
-    <p-button type="button" (click)="screenVisible = false" icon="pi pi-user" label=" Usuarios" routerLink="/usuarios" styleClass="p-button-success"></p-button>
+    <div class="p-grid">
+        <div class="p-col-12"><img style="width: 100%; height: 100%;" src="../../../assets/img/senai.jpg" alt="senai"></div>
+        <div class="p-col-12">
+            <p-tieredMenu style="border-style: none;" [model]="items" style="border: 0ch;"></p-tieredMenu>
+        </div>
+    </div>
 </p-sidebar>
