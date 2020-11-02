@@ -30,7 +30,7 @@ import {DropdownModule} from 'primeng/dropdown';
 import {InputMaskModule} from 'primeng/inputmask';
 import {SelectButtonModule} from 'primeng/selectbutton';
 import {TieredMenuModule} from 'primeng/tieredmenu';
-import {MenuItem} from 'primeng/api';
+import {InputSwitchModule} from 'primeng/inputswitch';
 const config: SocketIoConfig = { url: 'http://localhost:1880/ambientes', options: {} };
 
 
@@ -70,7 +70,7 @@ const config: SocketIoConfig = { url: 'http://localhost:1880/ambientes', options
     InputMaskModule,
     SelectButtonModule,
     TieredMenuModule,
-        
+    InputSwitchModule
   ],
   providers: [],
   bootstrap: [AppComponent]

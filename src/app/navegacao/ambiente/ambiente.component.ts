@@ -9,6 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class AmbienteComponent implements OnInit {
   statusSelecionado: any = null;
   selecionePerfilUsuario: any= null;
+  ligarLanpadaFrente: boolean = false;
+  ligarLanpadaFundo: boolean = false;
+  ligarAr: boolean = false;
+  desligarTudo: boolean = false;
   constructor() { }
 
   ngOnInit() {

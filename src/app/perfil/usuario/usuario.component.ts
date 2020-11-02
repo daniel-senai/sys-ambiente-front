@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsuarioComponent implements OnInit {
 
+  statusSelecionado: any = null;
+  selecionePerfilUsuario: any= null;
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
+  status: any[] = [
+    { name: 'ATIVO', code: 'ATIVO' },
+    { name: 'INATIVO', value: 'INATIVO' },
+  ];
+  perfilUsuarios: any[] = [
+    { name: 'ALUNO', value: 'ALUNO' },
+    { name: 'PROFESSOR', code: 'PROFESSOR' },
+  ];
 
 }

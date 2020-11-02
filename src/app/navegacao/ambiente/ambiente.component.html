@@ -12,63 +12,92 @@
                 </div>
                 <div class="p-col-10 p-md-6">
                     <div class="p-fluid">
-                        <div class="p-field">
-                            <label for="nomePerfil">Nome:</label>
-                            <input id="nomePerfil" type="text" pInputText>
+                        <div class="p-field p-col-12 p-md-12">
+                            <label for="perfil">Regional: </label>
+                            <p-dropdown inputId="perfil" [options]="perfilUsuarios" placeholder="Select" optionLabel="name"></p-dropdown>
                         </div>
-                        <div class="p-field">
-                            <label for="emailPerfil">E-mail:</label>
-                            <input id="emailPerfil" type="text" pInputText>
+                        <div class="p-field p-col-12 p-md-12">
+                            <label for="perfil">Unidade: </label>
+                            <p-dropdown inputId="perfil" [options]="perfilUsuarios" placeholder="Select" optionLabel="name"></p-dropdown>
                         </div>
-                        <div class="p-field">
-                            <label for="telefonePerfil">Celular:</label>
-                            <input id="telefonePerfil" type="fone" pInputText>
+                        <div class="p-field p-col-12 p-md-12">
+                            <label for="perfil">Bloco: </label>
+                            <p-dropdown inputId="perfil" [options]="perfilUsuarios" placeholder="Select" optionLabel="name"></p-dropdown>
+                        </div>
+                        <div class="p-field p-col-12 p-md-12">
+                            <label for="telefonePerfil">Sala:</label>
+                            <input id="telefonePerfil" type="number" pInputText>
                         </div>
                         <div class="p-fluid">
                             <div class="p-field p-col-12 p-md-12">
-                                <label for="stat">Status: </label>
+                                <label for="stat">Tipo de Ambiente: </label>
                                 <p-dropdown inputId="stat" [options]="status" placeholder="Select" optionLabel="name"></p-dropdown>
                             </div>
                             <div class="p-field p-col-12 p-md-12">
-                                <label for="perfil">Perfil de Usuário: </label>
-                                <p-dropdown inputId="perfil" [options]="perfilUsuarios" placeholder="Select" optionLabel="name"></p-dropdown>
-                            </div>
-                            <div class="p-field p-col-12 p-md-12">
-                                <label for="nomePerfil">Codigo RFID:</label>
-                                <input disabled="true" id="nomePerfil" type="text" pInputText>
+                                <label for="telefonePerfil">Capacidade:</label>
+                                <input id="telefonePerfil" type="number" pInputText>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="p-grid">
+            <div class="p-fluid p-grid">
                 <div class="p-col-10 p-md-6">
-                    <div class="p-grid" style="padding: 2%;">
+                    <div class="p-grid">
                         <button pButton pRipple type="button" icon="pi pi-upload" label="Carregar Foto" class="p-button-primary"></button>
+                        <hr>
                         <button pButton pRipple type="button" icon="pi pi-camera" label="Camera" class="p-button-secondary" style="background-color: black;!important"></button>
                     </div>
                 </div>
                 <div class="p-col-10 p-md-6">
-                    <div class="p-grid">
-                        <div class="p-col">
-                            <div class="p-grid" style="padding: 2%;">
-                                <button pButton pRipple type="button" icon="pi pi-cloud-upload" label="Ler RFID" class="p-button-primary"></button>
-                                <button pButton pRipple type="button" icon="pi pi-times" label="Bloquear RFID" class="p-button-danger"></button>
+                    <div class="p-fluid p-grid">
+                        <div class="p-col-10 p-md-6">
+                            <div class="p-grid" style="font-size: 105%; ">
+                                <div class="p-col-10 p-md-12" style="display: flex; align-items: flex-start;">
+                                    <p-inputSwitch></p-inputSwitch> Ligar lampada - Frente
+                                </div>
+                                <div class="p-col-10 p-md-12" style="display: flex; align-items: flex-start;">
+                                    <p-inputSwitch></p-inputSwitch> Ligar lampada - Fundo
+                                </div>
+                                <div class="p-col-10 p-md-12" style="display: flex; align-items: flex-start;">
+                                    <p-inputSwitch></p-inputSwitch> Ligar Ar - Condicionado
+                                </div>
+                                <div class="p-col-10 p-md-12" style="display: flex; align-items: flex-start;">
+                                    <p-inputSwitch></p-inputSwitch> Desligar Tudo
+                                </div>
                             </div>
                         </div>
-                        <div class="p-col">
-                            <div class="p-grid" style="padding: 2%;">
-                                <button pButton pRipple type="button" icon="pi pi-unlock" label="Salas com Acesso" class="p-button-info"></button>
-                                <button pButton pRipple type="button" icon="pi pi-chart-bar" label="Relatorio de Acessos" class="p-button-help"></button>
+                        <div class="p-col-10 p-md-6">
+                            <div class="p-grid">
+                                <div class="p-col-10 p-md-12">
+                                    <button pButton pRipple type="button" icon="pi pi-android" label="Embarcado" class="p-button-secondary" style="background-color: black;!important"></button>
+                                </div>
+                            </div>
+                            <div class="p-grid" style="padding-top: 10%;">
+                                <div class="p-col-10 p-md-12">
+                                    <button pButton pRipple type="button" icon="pi pi-unlock" label="Usuário com Acesso" class="p-button-success"></button>
+                                </div>
+                            </div>
+                            <div class="p-grid" style="padding-top: 10%;">
+                                <div class="p-col-10 p-md-12">
+                                    <button pButton pRipple type="button" icon="pi pi-chart-bar" label="Relatorio de Acessos" class="p-button-info"></button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="p-grid" style="padding: 2%;">
-                <button pButton pRipple type="button" icon="pi pi-save" label="Salvar" class="p-button-success"></button>
-                <button pButton pRipple type="button" icon="pi pi-trash" label="Excluir" class="p-button-danger"></button>
-                <button pButton pRipple type="button" icon="pi pi-times-circle" label="Cancelar" class="p-button-warning"></button>
+            <hr>
+            <div class="p-fluid p-grid">
+                <div class="p-col-10 p-md-4">
+                    <button pButton pRipple type="button" icon="pi pi-save" label="Salvar" class="p-button-success"></button>
+                </div>
+                <div class="p-col-10 p-md-4">
+                    <button pButton pRipple type="button" icon="pi pi-trash" label="Excluir" class="p-button-danger"></button>
+                </div>
+                <div class="p-col-10 p-md-4">
+                    <button pButton pRipple type="button" icon="pi pi-times-circle" label="Cancelar" class="p-button-warning"></button>
+                </div>
             </div>
         </p-panel>
     </div>

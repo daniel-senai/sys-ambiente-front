@@ -1,1 +1,86 @@
-<p>usuario works!</p>
+<div class="p-grid " style="padding-top: 2%;">
+    <div class="p-col-1"></div>
+    <div class="p-col-10 p-md-10">
+        <p-panel header="Cadastro de novos Usuarios">
+            <div class="p-grid">
+                <div class="p-col-10 p-md-6 ">
+                    <p-card styleClass="p-card-shadow">
+                        <p-header>
+                            <img alt="Card" src="assets/showcase/images/usercard.png">
+                        </p-header>
+                    </p-card>
+                </div>
+                <div class="p-col-10 p-md-6">
+                    <div class="p-fluid">
+                        <div class="p-field">
+                            <label for="nomePerfil">Nome:</label>
+                            <input id="nomePerfil" type="text" pInputText>
+                        </div>
+                        <div class="p-field">
+                            <label for="emailPerfil">E-mail:</label>
+                            <input id="emailPerfil" type="text" pInputText>
+                        </div>
+                        <div class="p-field">
+                            <label for="telefonePerfil">Celular:</label>
+                            <input id="telefonePerfil" type="fone" pInputText>
+                        </div>
+                        <div class="p-fluid">
+                            <div class="p-field">
+                                <label for="stat">Status: </label>
+                                <p-dropdown inputId="stat" [options]="status" placeholder="Select" optionLabel="name"></p-dropdown>
+                            </div>
+                            <div class="p-field">
+                                <label for="perfil">Perfil de Usuário: </label>
+                                <p-dropdown inputId="perfil" [options]="perfilUsuarios" placeholder="Select" optionLabel="name"></p-dropdown>
+                            </div>
+                            <div class="p-field">
+                                <label for="nomePerfil">Codigo RFID:</label>
+                                <input disabled="true" id="nomePerfil" type="text" pInputText>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-grid">
+                <div class="p-col-10 p-md-6">
+                    <div class="p-fluid p-grid" style="padding: 1%;">
+                        <button pButton pRipple type="button" icon="pi pi-upload" label="Carregar Foto" class="p-button-primary"></button>
+                        <hr>
+                        <button pButton pRipple type="button" icon="pi pi-camera" label="Camera" class="p-button-secondary" style="background-color: black;!important"></button>
+                    </div>
+                </div>
+                <div class="p-col-10 p-md-6">
+                    <div class="p-fluid p-grid">
+                        <div class="p-col">
+                            <div class="p-grid" style="padding: 2%;">
+                                <button pButton pRipple type="button" icon="pi pi-cloud-upload" label="Ler RFID" class="p-button-primary"></button>
+                                <hr>
+                                <button pButton pRipple type="button" icon="pi pi-times" label="Bloquear RFID" class="p-button-danger"></button>
+                            </div>
+                        </div>
+                        <div class="p-col">
+                            <div class="p-grid" style="padding: 2%;">
+                                <button pButton pRipple type="button" icon="pi pi-unlock" label="Salas com Acesso" class="p-button-info"></button>
+                                <hr>
+                                <button pButton pRipple type="button" icon="pi pi-chart-bar" label="Relatorio de Acessos" class="p-button-help"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="p-fluid p-grid">
+                <div class="p-col-10 p-md-4">
+                    <button pButton pRipple type="button" icon="pi pi-save" label="Salvar" class="p-button-success"></button>
+                </div>
+                <div class="p-col-10 p-md-4">
+                    <button pButton pRipple type="button" icon="pi pi-trash" label="Excluir" class="p-button-danger"></button>
+                </div>
+                <div class="p-col-10 p-md-4">
+                    <button pButton pRipple type="button" icon="pi pi-times-circle" label="Cancelar" class="p-button-warning"></button>
+                </div>
+            </div>
+        </p-panel>
+    </div>
+    <div class="p-col-1"></div>
+</div>
