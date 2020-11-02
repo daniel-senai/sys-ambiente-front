@@ -25,7 +25,13 @@ import {MultiSelectModule} from 'primeng/multiselect';
 import { NotificacoesComponent } from './navegacao/notificacoes/notificacoes.component';
 import { AcessosComponent } from './navegacao/acessos/acessos.component';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
-const config: SocketIoConfig = { url: 'http://localhost:3000/notificacoes', options: {} };
+import {PanelModule} from 'primeng/panel';
+import {DropdownModule} from 'primeng/dropdown';
+import {InputMaskModule} from 'primeng/inputmask';
+import {SelectButtonModule} from 'primeng/selectbutton';
+import {TieredMenuModule} from 'primeng/tieredmenu';
+import {InputSwitchModule} from 'primeng/inputswitch';
+const config: SocketIoConfig = { url: 'http://localhost:1880/ambientes', options: {} };
 
 
 
@@ -43,6 +49,7 @@ const config: SocketIoConfig = { url: 'http://localhost:3000/notificacoes', opti
     NotificacoesComponent,
     AcessosComponent,
     
+    
   ],
   imports: [
     BrowserModule,
@@ -57,8 +64,13 @@ const config: SocketIoConfig = { url: 'http://localhost:3000/notificacoes', opti
     AppRoutingModule,
     MultiSelectModule,  
     HttpClientModule,
-    SocketIoModule.forRoot(config)
-    
+    SocketIoModule.forRoot(config),
+    PanelModule,
+    DropdownModule,
+    InputMaskModule,
+    SelectButtonModule,
+    TieredMenuModule,
+    InputSwitchModule
   ],
   providers: [],
   bootstrap: [AppComponent]

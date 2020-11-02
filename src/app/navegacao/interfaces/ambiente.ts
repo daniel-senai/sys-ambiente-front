@@ -4,7 +4,7 @@ export interface Ambiente {
     numero: number,
     bloco: string,
     area: string,
-    unidInstitucional: string,
+    unidInstitucional: Regional,
     capacidade: number,
     totalPessoa: number,
     totalComputador: number,
@@ -15,4 +15,8 @@ export interface Acesso{
     dtEntrada: number,
     dtSaida: number,
     ambiente: Ambiente,
+}
+export interface Regional{
+    id: number,
+    regional: string
 }
