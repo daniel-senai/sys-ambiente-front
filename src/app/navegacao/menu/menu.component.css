@@ -1,3 +1,7 @@
 :host ::ng-deep button {
     margin-right: .25em;
 }
+
+.styleClass {
+    background-color: aqua;
+}

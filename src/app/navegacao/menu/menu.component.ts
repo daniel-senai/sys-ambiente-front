@@ -23,7 +23,8 @@ export class MenuComponent implements OnInit {
           {
             label: 'Cadastrar Novo',
             icon: 'pi pi-fw pi-plus',
-            routerLink: ['/ambiente']
+            routerLink: ['/ambiente'],
+            escape: false,
           },
           {
             separator: true

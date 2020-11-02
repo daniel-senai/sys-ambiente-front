@@ -7,23 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ambiente.component.css']
 })
 export class AmbienteComponent implements OnInit {
-  regional: Regional[];
-  regionalSelecionada: Regional;
+  statusSelecionado: any = null;
+  selecionePerfilUsuario: any= null;
+  constructor() { }
 
-  constructor() {
-
-    
-    this.regional = [];
-        for (let i = 0; i < 10000; i++) {
-            this.regional.push({id:  i, regional: 'Regional' + i});
-        }
-
-    this.regional = [
-      { regional: 'DRGO', id: 1 },
-      { regional: 'DRSP', id: 2 },
-    ]
+  ngOnInit() {
   }
-
-  ngOnInit(): void {
-  }
+  status: any[] = [
+    { name: 'ATIVO', code: 'ATIVO' },
+    { name: 'INATIVO', value: 'INATIVO' },
+  ];
+  perfilUsuarios: any[] = [
+    { name: 'ALUNO', value: 'ALUNO' },
+    { name: 'PROFESSOR', code: 'PROFESSOR' },
+  ];
 }
+
