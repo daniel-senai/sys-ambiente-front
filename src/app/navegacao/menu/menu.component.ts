@@ -62,6 +62,7 @@ export class MenuComponent implements OnInit {
           {
             label: 'Listar Notificações',
             icon: 'pi pi-fw pi-pencil',
+            routerLink: ['/notificacoes']
           },
           {
             separator: true
@@ -69,6 +70,7 @@ export class MenuComponent implements OnInit {
           {
             label: 'Gestão',
             icon: 'pi pi-fw pi-chart-bar',
+            routerLink: ['/notificacoes']
           }
         ]
       },

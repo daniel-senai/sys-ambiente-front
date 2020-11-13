@@ -8,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./notificacoes.component.css']
 })
 export class NotificacoesComponent implements OnInit {
-  notificacoes: Notificacao[] = [];
+  notificationDialog: boolean;
+  notificacoes: Notificacao[];
   novaNotificacao: Notificacao;
+  selectedNotification: Notificacao[];
+  submited: boolean;
 
   constructor(private notificacao: NotificacoesService) { }
 
@@ -22,5 +25,9 @@ export class NotificacoesComponent implements OnInit {
   }
   enviarNotificacao() {
     this.notificacao.sendNotificacao(this.novaNotificacao);
+  }
+  hideDialog() {
+    this.notificationDialog = false;
+    this.submited = false;
   }
 }
