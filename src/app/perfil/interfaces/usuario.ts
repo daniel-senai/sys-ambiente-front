@@ -1,27 +1,5 @@
-import { Acesso } from './../../navegacao/interfaces/ambiente';
-export interface Endereco {
-    id: number,
-    cep: string,
-    logradouro: string,
-    complemento: string,
-    pais: Pais,
-    estado: Estado,
-    cidade: Cidade
-}
-export interface Pais {
-    id: number,
-    nome: string,
-    estados: Estado[]
-}
-export interface Estado {
-    id: number,
-    nome: string
-    cidades: Cidade[]
-}
-export interface Cidade {
-    id: number,
-    nome: string
-}
+import { Endereco } from "./Endereco";
+
 export interface Usuario {
     id: number,
     nome: string,
@@ -32,5 +10,4 @@ export interface Usuario {
     token: string,
     status: boolean
     endereco: Endereco,
-    acesso: Acesso
 }

@@ -1,4 +1,4 @@
-import { Ambiente } from './ambiente';
+import { Ambiente } from '../interface_ambiente/ambiente';
 export interface Notificacao{
     id: number,
     ambiente: Ambiente,

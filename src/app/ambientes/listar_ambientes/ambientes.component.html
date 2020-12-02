@@ -8,32 +8,23 @@
         <p-table #dt1 [value]="ambientes" selectionMode="single" [(selection)]="ambienteSetado" dataKey="id" styleClass="p-datatable-ambientes" [rows]="10" [paginator]="true" stateStorage="local" stateKey="statedemo-local">
             <ng-template pTemplate="header" let-columns>
                 <tr style="font-size: 90% !important;">
-                    <th pSortableColumn="tipoAmbiente">Tipo de Ambiente
-                        <p-sortIcon field="tipoAmbiente"></p-sortIcon>
+                    <th pSortableColumn="tipoAmbiente">Identificador
+                        <p-sortIcon field="Identificador"></p-sortIcon>
                     </th>
-                    <th pSortableColumn="numero">Numero
+                    <th pSortableColumn="numero">Nome da Sala
                         <p-sortIcon field="numero"></p-sortIcon>
                     </th>
-                    <th pSortableColumn="bloco">Bloco
+                    <th pSortableColumn="bloco">Items da Sala
                         <p-sortIcon field="bloco"></p-sortIcon>
-                    </th>
-                    <th pSortableColumn="area">Area
-                        <p-sortIcon field="area"></p-sortIcon>
-                    </th>
-                    <th pSortableColumn="uniInstitucional">Unidade Institucional
-                        <p-sortIcon field="uniInstitucional"></p-sortIcon>
                     </th>
                     <th pSortableColumn="capacidade">Capacidade
                         <p-sortIcon field="capacidade"></p-sortIcon>
                     </th>
-                    <th pSortableColumn="totalPessoa">Total de Pessoas
-                        <p-sortIcon field="totalPessoa"></p-sortIcon>
-                    </th>
-                    <th pSortableColumn="totalComputador">Total de Computadores
-                        <p-sortIcon field="totalComputador"></p-sortIcon>
-                    </th>
                     <th pSortableColumn="ipCamera">IpCamera
                         <p-sortIcon field="ipCamera"></p-sortIcon>
+                    </th>
+                    <th pSortableColumn="tipoAmbiente">Tipo de Ambiente
+                        <p-sortIcon field="tipoAmbiente"></p-sortIcon>
                     </th>
                 </tr>
                 <tr>
@@ -55,45 +46,27 @@
                     <th>
                         <input style="width: 100% !important;" pInputText type="text" (input)="dt1.filter($event.target.value, 'capacidade', 'contains')" [value]="dt1.filters['capacidade']?.value" placeholder="Buscar" class="p-column-filter">
                     </th>
-                    <th>
-                        <input style="width: 100% !important;" pInputText type="text" (input)="dt1.filter($event.target.value, 'totalPessoa', 'contains')" [value]="dt1.filters['totalPessoa']?.value" placeholder="Buscar" class="p-column-filter">
-                    </th>
-                    <th>
-                        <input style="width: 100% !important;" pInputText type="text" (input)="dt1.filter($event.target.value, 'totalComputador', 'contains')" [value]="dt1.filters['totalComputador']?.value" placeholder="Buscar" class="p-column-filter">
-                    </th>
-                    <th>
-                        <input style="width: 100% !important;" pInputText type="text" (input)="dt1.filter($event.target.value, 'ipCamera', 'contains')" [value]="dt1.filters['ipCamera']?.value" placeholder="Buscar" class="p-column-filter">
-                    </th>
                 </tr>
             </ng-template>
             <ng-template pTemplate="body" let-ambiente let-rowData let-columns="columns">
                 <tr [pSelectableRow]="ambiente">
                     <td>
-                        <span class="image-text">{{ambiente.tipoAmbiente}}</span>
+                        <span class="image-text">{{ambiente.id}}</span>
                     </td>
                     <td>
-                        <span class="image-text">{{ambiente.numero}}</span>
+                        <span class="image-text">{{ambiente.nome}}</span>
                     </td>
                     <td>
-                        <span class="image-text">{{ambiente.bloco}}</span>
-                    </td>
-                    <td>
-                        <span class="image-text">{{ambiente.area}}</span>
-                    </td>
-                    <td>
-                        <span class="image-text">{{ambiente.unidInstitucional}}</span>
+                        <span class="image-text">{{ambiente.descricao}}</span>
                     </td>
                     <td>
                         <span class="image-text">{{ambiente.capacidade}}</span>
                     </td>
                     <td>
-                        <span class="image-text">{{ambiente.totalPessoa}}</span>
-                    </td>
-                    <td>
-                        <span class="image-text">{{ambiente.totalComputador}}</span>
-                    </td>
-                    <td>
                         <span class="image-text">{{ambiente.ipCamera}}</span>
+                    </td>
+                    <td>
+                        <span class="image-text">{{ambiente.tipoAmbiente}}</span>
                     </td>
                 </tr>
             </ng-template>

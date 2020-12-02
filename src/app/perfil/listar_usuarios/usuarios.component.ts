@@ -1,7 +1,7 @@
-import { UsuarioService } from './../service/usuario.service';
-import { ErrorMsgComponent } from './../../share/error-msg/error-msg.component';
+import { UsuarioService } from '../service/usuario.service';
+import { ErrorMsgComponent } from '../../share/error-msg/error-msg.component';
 import { HttpClient } from '@angular/common/http';
-import { Usuario } from './../interfaces/usuario';
+import { Usuario } from '../interfaces/usuario';
 import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({

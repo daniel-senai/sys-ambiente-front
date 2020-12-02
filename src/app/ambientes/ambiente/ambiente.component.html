@@ -4,7 +4,7 @@
         <p-panel header="Cadastro de novos Ambientes">
             <div class="p-grid">
                 <div class="p-col-10 p-md-6 ">
-                    <p-card styleClass="p-card-shadow">
+                    <p-card styleClass="p-card-shadow" >
                         <p-header>
                             <img alt="Card" src="assets/showcase/images/usercard.png">
                         </p-header>
@@ -13,16 +13,16 @@
                 <div class="p-col-10 p-md-6">
                     <div class="p-fluid">
                         <div class="p-field p-col-12 p-md-12">
-                            <label for="perfil">Regional: </label>
-                            <p-dropdown inputId="perfil" [options]="perfilUsuarios" placeholder="Select" optionLabel="name"></p-dropdown>
+                            <label for="regional">Regional: </label>
+                            <p-dropdown inputId="regional" [options]="regionais" placeholder="Select" optionLabel="name"></p-dropdown>
                         </div>
                         <div class="p-field p-col-12 p-md-12">
-                            <label for="perfil">Unidade: </label>
-                            <p-dropdown inputId="perfil" [options]="perfilUsuarios" placeholder="Select" optionLabel="name"></p-dropdown>
+                            <label for="unidade">Unidade: </label>
+                            <p-dropdown inputId="unidade" [options]="unidades" placeholder="Select" optionLabel="name"></p-dropdown>
                         </div>
                         <div class="p-field p-col-12 p-md-12">
-                            <label for="perfil">Bloco: </label>
-                            <p-dropdown inputId="perfil" [options]="perfilUsuarios" placeholder="Select" optionLabel="name"></p-dropdown>
+                            <label for="bloco">Bloco: </label>
+                            <p-dropdown inputId="bloco" [options]="blocos" placeholder="Select" optionLabel="name"></p-dropdown>
                         </div>
                         <div class="p-field p-col-12 p-md-12">
                             <label for="telefonePerfil">Sala:</label>
@@ -30,8 +30,8 @@
                         </div>
                         <div class="p-fluid">
                             <div class="p-field p-col-12 p-md-12">
-                                <label for="stat">Tipo de Ambiente: </label>
-                                <p-dropdown inputId="stat" [options]="status" placeholder="Select" optionLabel="name"></p-dropdown>
+                                <label for="tipoAmbiente">Tipo de Ambiente: </label>
+                                <p-dropdown inputId="tipoAmbiente" [options]="tipoAmbientes" placeholder="Select" optionLabel="name"></p-dropdown>
                             </div>
                             <div class="p-field p-col-12 p-md-12">
                                 <label for="telefonePerfil">Capacidade:</label>

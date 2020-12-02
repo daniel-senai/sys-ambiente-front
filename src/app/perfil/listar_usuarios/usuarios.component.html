@@ -1,11 +1,14 @@
 <p-card header="Gestão de Usuarios">
     <div class="card">
         <span class="p-buttonset">
-            <button pButton class="p-button-success" routerLink="/usuario" type="button" label="Novo Usuario" icon="pi pi-plus-circle"></button>
+            <button pButton class="p-button-success" routerLink="/usuario" type="button" label="Novo Usuario"
+                icon="pi pi-plus-circle"></button>
             <button pButton class="p-button-danger" type="button" label="Deletar Usuario" icon="pi pi-trash"></button>
         </span>
         <hr>
-        <p-table #dt1 [value]="usuarios" selectionMode="single" [(selection)]="usuarioSelecionado" dataKey="id" styleClass="p-datatable-usuarios" [rows]="10" [paginator]="true" stateStorage="local" stateKey="statedemo-local">
+        <p-table #dt1 [value]="usuarios" selectionMode="single" [(selection)]="usuarioSelecionado" dataKey="id"
+            styleClass="p-datatable-usuarios" [rows]="10" [paginator]="true" stateStorage="local"
+            stateKey="statedemo-local">
             <ng-template pTemplate="header">
                 <tr>
                     <th pSortableColumn="id">ID
@@ -13,9 +16,6 @@
                     </th>
                     <th pSortableColumn="nome">Nome do Aluno
                         <p-sortIcon field="nome"></p-sortIcon>
-                    </th>
-                    <th pSortableColumn="email">E-mail
-                        <p-sortIcon field="email"></p-sortIcon>
                     </th>
                     <th pSortableColumn="celular">Celular
                         <p-sortIcon field="celular"></p-sortIcon>
@@ -26,25 +26,35 @@
                     <th pSortableColumn="codigoRFID">Codigo RFID
                         <p-sortIcon field="codigoRFID"></p-sortIcon>
                     </th>
+                    <th pSortableColumn="email">E-mail
+                        <p-sortIcon field="email"></p-sortIcon>
+                    </th>
                 </tr>
                 <tr>
                     <th>
-                        <input pInputText type="text" (input)="dt1.filter($event.target.value, 'id', 'contains')" [value]="dt1.filters['id']?.value" placeholder="Buscar" class="p-column-filter">
+                        <input pInputText type="text" (input)="dt1.filter($event.target.value, 'id', 'contains')"
+                            [value]="dt1.filters['id']?.value" placeholder="Buscar" class="p-column-filter">
                     </th>
                     <th>
-                        <input pInputText type="text" (input)="dt1.filter($event.target.value, 'nome', 'contains')" [value]="dt1.filters['nome']?.value" placeholder="Buscar" class="p-column-filter">
+                        <input pInputText type="text" (input)="dt1.filter($event.target.value, 'nome', 'contains')"
+                            [value]="dt1.filters['nome']?.value" placeholder="Buscar" class="p-column-filter">
                     </th>
                     <th>
-                        <input pInputText type="text" (input)="dt1.filter($event.target.value, 'email', 'contains')" [value]="dt1.filters['email']?.value" placeholder="Buscar" class="p-column-filter">
+                        <input pInputText type="text" (input)="dt1.filter($event.target.value, 'celular', 'contains')"
+                            [value]="dt1.filters['celular']?.value" placeholder="Buscar" class="p-column-filter">
                     </th>
                     <th>
-                        <input pInputText type="text" (input)="dt1.filter($event.target.value, 'celular', 'contains')" [value]="dt1.filters['celular']?.value" placeholder="Buscar" class="p-column-filter">
+                        <input pInputText type="text" (input)="dt1.filter($event.target.value, 'status', 'contains')"
+                            [value]="dt1.filters['status']?.value" placeholder="Buscar" class="p-column-filter">
                     </th>
                     <th>
-                        <input pInputText type="text" (input)="dt1.filter($event.target.value, 'status', 'contains')" [value]="dt1.filters['status']?.value" placeholder="Buscar" class="p-column-filter">
+                        <input pInputText type="text"
+                            (input)="dt1.filter($event.target.value, 'codigoRFID', 'contains')"
+                            [value]="dt1.filters['codigoRFID']?.value" placeholder="Buscar" class="p-column-filter">
                     </th>
                     <th>
-                        <input pInputText type="text" (input)="dt1.filter($event.target.value, 'codigoRFID', 'contains')" [value]="dt1.filters['codigoRFID']?.value" placeholder="Buscar" class="p-column-filter">
+                        <input pInputText type="text" (input)="dt1.filter($event.target.value, 'email', 'contains')"
+                            [value]="dt1.filters['email']?.value" placeholder="Buscar" class="p-column-filter">
                     </th>
                 </tr>
             </ng-template>
@@ -57,16 +67,16 @@
                         <span class="image-text">{{usuario.nome}}</span>
                     </td>
                     <td>
-                        <span class="image-text">{{usuario.email}}</span>
-                    </td>
-                    <td>
                         <span class="image-text">{{usuario.celular}}</span>
                     </td>
                     <td>
-                        <span [class]="'usuario-badge status-' + usuario.status">{{usuario.status}}</span>
+                        <span [class]="'usuario-badge status-' + usuario.status" >{{usuario.status}}</span>
                     </td>
                     <td>
                         <span class="image-text">{{usuario.codigoRFID}}</span>
+                    </td>
+                    <td>
+                        <span class="image-text">{{usuario.email}}</span>
                     </td>
                 </tr>
             </ng-template>

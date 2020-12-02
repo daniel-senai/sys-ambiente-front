@@ -1,5 +1,5 @@
-import { Notificacao } from './../interfaces/notificacoes';
-import { NotificacoesService } from './../service/notificacoes.service';
+import { Notificacao } from '../interfaces/interface_notificacao/notificacoes';
+import { NotificacoesService } from '../services/notificacao_service/notificacoes.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

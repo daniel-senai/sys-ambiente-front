@@ -1,8 +1,8 @@
-import { NotificacoesComponent } from './navegacao/notificacoes/notificacoes.component';
+import { NotificacoesComponent } from './ambientes/notificacoes/notificacoes.component';
 import { UsuarioComponent } from './perfil/usuario/usuario.component';
-import { UsuariosComponent } from './perfil/usuarios/usuarios.component';
-import { AmbientesComponent } from './navegacao/ambientes/ambientes.component';
-import { AmbienteComponent } from './navegacao/ambiente/ambiente.component';
+import { UsuariosComponent } from './perfil/listar_usuarios/usuarios.component';
+import { AmbientesComponent } from './ambientes/listar_ambientes/ambientes.component';
+import { AmbienteComponent } from './ambientes/ambiente/ambiente.component';
 import { HomeComponent } from './navegacao/home/home.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
